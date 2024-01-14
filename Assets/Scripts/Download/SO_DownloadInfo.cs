@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 [CreateAssetMenu(fileName = "DownloadInfo", menuName = "Data/Download Info")]
 public class SO_DownloadInfo : ScriptableObject
