@@ -7,7 +7,7 @@ public abstract class DownloadHelper<T> : MonoBehaviour
     //Out Events
     [SerializeField] protected SO_Event _onDownloadError;
     [SerializeField] protected SO_BaseEvent<T> _onDownloadComplited;
-
+    
     [Space(2)]
     //In Events
     [SerializeField] private SO_Event _onDownloadRequest;

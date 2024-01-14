@@ -7,4 +7,8 @@ public class SO_DownloadInfo : ScriptableObject
     public string SavePath => Application.persistentDataPath + _savePath;
     [SerializeField] string _link;
     [SerializeField] string _savePath;
+
+    // private void OnValidate() {
+        // SavePath = Application.persistentDataPath + _savePath;
+    // }
 }

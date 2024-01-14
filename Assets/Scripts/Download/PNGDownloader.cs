@@ -13,7 +13,7 @@ public class PNGDownloader : DownloadHelper<Texture2D>
                 Save(DownloadHandlerTexture.GetContent(www));
             }
             else{
-                Debug.LogWarning("Error while downloading Texture");
+                Debug.LogWarning("Error downloading PNG file: " + www.error);
                _onDownloadError.Invoke(); 
             }
 
@@ -27,10 +27,11 @@ public class PNGDownloader : DownloadHelper<Texture2D>
         if (!Directory.Exists(directoryPath)){
             Directory.CreateDirectory(directoryPath);
         }
-        Debug.Log(directoryPath);
-        Debug.Log(_downloadInfo.SavePath);
         File.WriteAllBytes(_downloadInfo.SavePath, bytes);
+        
         _onDownloadComplited.Invoke(value);
+
+        Debug.Log("PNG file downloaded and saved to: " + _downloadInfo.SavePath);
     }
 
 }
