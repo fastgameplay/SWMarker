@@ -528,6 +528,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174307723}
   m_CullTransparentMesh: 1
+--- !u!1 &259247996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259247997}
+  - component: {fileID: 259247998}
+  m_Layer: 0
+  m_Name: GLB Download
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &259247997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259247996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 507801222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259247998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259247996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9bc8293d90ed140bcfdf93889673b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onDownloadError: {fileID: 11400000, guid: 7ace18c95d2169c4baf37cd609e7dff7, type: 2}
+  _onDownloadComplited: {fileID: 11400000, guid: 9940fef1dfd17654a9959ba1dbc16c37,
+    type: 2}
+  _onDownloadRequest: {fileID: 11400000, guid: 4222d2a03e159f54b8dc758e73c22d2c, type: 2}
+  _downloadInfo: {fileID: 0}
+  _downloadOnStart: 0
 --- !u!1 &388525029
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +795,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 837264977}
+  - {fileID: 259247997}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
