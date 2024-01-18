@@ -1,18 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GLBLoader : MonoBehaviour
+public class GLBLoader : LoadHelper<Byte[]>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    protected override void OnLoadRequest(){
+        if(CheckPath(_downloadInfo.SavePath)){
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            return;
+        }
+        Debug.Log("Image Not Found, Requested Download...");
+        RequestDownload();
+    }
+    protected override void OnDownloadComplited(Byte[] value){
+
     }
 }

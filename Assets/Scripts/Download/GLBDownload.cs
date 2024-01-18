@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -33,5 +34,6 @@ public class GLBDownload : DownloadHelper<byte[]>
 
         Debug.Log("GLB file downloaded and saved to: " + _downloadInfo.SavePath);
     }
+  
 
 }
